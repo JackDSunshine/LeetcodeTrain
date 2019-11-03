@@ -5,7 +5,7 @@ import java.util.HashMap;
  * @date 2019/11/4  0:34
  */
 
-public class LeetcodeTrain {
+public class LeetcodeTrainSimple {
     public static int game(int[] guess, int[] answer) {
         /*
          * int result = 0; for (int i = 0; i < guess.length; i++) { if (guess[i] ==
