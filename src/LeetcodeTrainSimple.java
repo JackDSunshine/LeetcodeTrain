@@ -6,6 +6,7 @@ import java.util.HashMap;
  */
 
 public class LeetcodeTrainSimple {
+
     public static int game(int[] guess, int[] answer) {
         /*
          * int result = 0; for (int i = 0; i < guess.length; i++) { if (guess[i] ==
@@ -13,14 +14,14 @@ public class LeetcodeTrainSimple {
          *
          * } return result;
          */
-        return (guess[0] == answer[0] ? 1:0)+(guess[1] == answer[1] ? 1:0)+(guess[2] == answer[2] ? 1:0);
+        return (guess[0] == answer[0] ? 1 : 0) + (guess[1] == answer[1] ? 1 : 0) + (guess[2] == answer[2] ? 1 : 0);
     }
 
     public static int numJewelsInStones(String J, String S) {
         HashMap<Character, Integer> sCount = new HashMap<Character, Integer>();
         int result = 0;
         for (int i = 0; i < S.length(); i++) {
-            sCount.put(S.charAt(i), sCount.getOrDefault(S.charAt(i), 0)+1);
+            sCount.put(S.charAt(i), sCount.getOrDefault(S.charAt(i), 0) + 1);
         }
 
         for (int i = 0; i < J.length(); i++) {
@@ -41,5 +42,10 @@ public class LeetcodeTrainSimple {
          * result.append(addressParsed[3]); return result.toString();
          */
         return address.replaceAll("\\.", "[.]");
+    }
+
+    public void deleteNode(ListNode node) {
+        node.val = node.next.val;
+        node.next = node.next.next;
     }
 }
